@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 
-@Injectable()
+@Injectable() //  이 클래스를 Nest의 DI 컨테이너에 등록하라는 의미 >> Nest가 UserService 클래스를 “프로바이더(provider)”로 인식
 export class UsersService {
   create(createUserDto: CreateUserDto) {
     return 'This action adds a new user';
